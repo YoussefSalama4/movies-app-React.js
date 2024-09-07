@@ -84,7 +84,7 @@ export default function MovieDetails({
             <div className="details-overview">
               <h2>{title}</h2>
               <p>
-                {released} &bull; {runtime}
+                {released} &bull; {runtime || 0}
               </p>
               <p>{genre}</p>
               <p>
