@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import StarRating from "./starRating";
 import Loader from "./Loader";
 import { useKey } from "../useKey";
@@ -13,6 +13,9 @@ export default function MovieDetails({
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
+
+  const test = useRef(null);
+
   const {
     Title: title,
     Year: year,
@@ -53,6 +56,10 @@ export default function MovieDetails({
         setIsLoading(false);
       }
       getMovieDetails();
+      console.log(test.current);
+      if (test.current) {
+        test.current.scrollIntoView({ behavior: "smooth" });
+      }
     },
     [selectedID]
   );
@@ -94,7 +101,7 @@ export default function MovieDetails({
             </div>
           </header>
 
-          <section>
+          <section ref={test}>
             <div className="rating">
               {isWatched ? (
                 <p style={{ textAlign: "center" }}>
