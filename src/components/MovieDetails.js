@@ -36,7 +36,7 @@ export default function MovieDetails({
       year,
       poster,
       imdbRating: Number(imdbRating),
-      runtime: Number(runtime.split(" ")[0]),
+      runtime: Number(runtime.split(" ")[0]) || 0,
       userRating,
     };
     onAddWatched(newWatchedMovie);
