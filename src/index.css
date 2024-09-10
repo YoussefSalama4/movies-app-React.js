@@ -361,15 +361,15 @@ body {
     justify-content: space-between;
     padding: 1rem;
   }
+  .nav-bar h1 {
+    font-size: 1.8rem;
+  }
+  html {
+    font-size: 60%;
+  }
 
-  .logo span {
-    font-size: 2.2rem;
-  }
-  .logo h1 {
-    font-size: 1.5rem;
-  }
   .nav-bar input {
-    width: 40%;
+    width: 50%;
   }
   .nav-bar p {
     font-size: 1.5rem;
@@ -387,11 +387,15 @@ body {
 }
 
 @media (max-width: 550px) {
-  .nav-bar input {
-    width: 30%;
-    font-size: 1.2rem;
+  html {
+    font-size: 40%;
   }
-  .nav-bar input::placeholder {
-    font-size: 1.2rem;
+  .nav-bar input {
+    width: 40%;
+  }
+}
+@media (max-width: 335px) {
+  html {
+    font-size: 30%;
   }
 }
